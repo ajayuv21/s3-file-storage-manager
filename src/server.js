@@ -15,12 +15,12 @@ app.use(express.json());
 const upload = multer({ storage: multer.memoryStorage(), limits: { fieldSize: 25 * 1024 * 1024 } });
 
 const PORT = process.env.PORT || 3000;
-const S3_BUCKET = process.env.S3_BUCKET;
+const S3_BUCKET = 'ajayuv21';
 const WORKER_CONCURRENCY = parseInt(process.env.WORKER_CONCURRENCY || '2', 10);
 
 async function start() {
  
-  await mongoose.connect(process.env.MONGODB_URI, {});
+  await mongoose.connect('mongodb+srv://dev4ajayuv:uvAjay255@cluster0.h01sc.mongodb.net/?appName=Cluster0', {});
 
   // initialize job queue
   const queue = new JobQueue({ concurrency: WORKER_CONCURRENCY });

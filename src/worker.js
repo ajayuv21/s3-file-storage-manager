@@ -35,7 +35,7 @@ async function processFile(job, queueEmitter) {
   let failed = 0;
   const headerColumnsRef = { val: null };
 
-  const s3Stream = await getObjectStream({ Bucket: process.env.S3_BUCKET, Key: job.s3Key });
+  const s3Stream = await getObjectStream({ Bucket: 'ajayuv21', Key: job.s3Key });
 
   const rl = readline.createInterface({ input: s3Stream, crlfDelay: Infinity });
 
