@@ -19,7 +19,7 @@ const S3_BUCKET = 'ajayuv21';
 const WORKER_CONCURRENCY = parseInt(process.env.WORKER_CONCURRENCY || '2', 10);
 const MONGODB_URI='mongodb+srv://dev4ajayuv:uvAjay255@cluster0.h01sc.mongodb.net/?appName=Cluster0'
 async function start() {
- 
+ console.log(MONGODB_URI)
   await mongoose.connect(MONGODB_URI, {});
 
   // initialize job queue
