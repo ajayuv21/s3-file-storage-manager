@@ -1,8 +1,0 @@
-# Ignore node modules (installed inside container)
-node_modules
-
-# NPM debug file
-npm-debug.log
-
-# Docker related
-docker-compose.yml
